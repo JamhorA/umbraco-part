@@ -1,0 +1,39 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+    var pageTitle = !String.IsNullOrEmpty(ViewBag.Title) ? $"{ViewBag.Title} | Onatrix offers expert financial consulting services" : "Onatrix offers expert financial consulting services";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Onatrix offers expert financial consulting services, including risk management, financial advising, tax and trust services. With over 40 years of experience, we provide solutions to help grow your business faster. Contact us to learn more about our services and success stories.">
+    <title>@pageTitle</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href='@Url.Content("~/css/umbraco-starterkit-style.css")'> -->
+</head>
+
+<body>
+    @await Html.PartialAsync("Navigation")
+    <!-- main -->
+    <div class="main">
+        @RenderBody()
+    </div>
+    <!-- end main -->
+    <!-- footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>© Onatrix. All Rights Reserved. Credits to <a href="https://themesflat.com"
+                    target="_blank">Themesflat</a></p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="/scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/31bc6052f9.js" crossorigin="anonymous"></script>
+</body>
+</html>
